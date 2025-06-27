@@ -18,21 +18,20 @@ A Java-based backend engine that models a chessboard and validates legal movemen
 
 **Project Structure**
 
--Color.java - An Enum class to represent the black and white play colors.
--Pieces.java - An abstract class for all chess pieces.
--King.java - Is a Subclass of the Pieces.java class, Individual piece logic.
--Queen.java - Is a Subclass of the Pieces.java class, Individual piece logic.
--Bishop.java - Is a Subclass of the Pieces.java class, Individual piece logic.
--Rook.java - Is a Subclass of the Pieces.java class, Individual piece logic.
--Knight.java - Is a Subclass of the Pieces.java class, Individual piece logic.
--Pawn.java - Is a Subclass of the Pieces.java class, Individual piece logic.
--Player.java - Represents the chess player.
--Cell.java - Represents individual squares on the board.
--ChessGame.java - Coordinates the game state and move Validations, Reading inputs, Game loop and move controller
--ChangeRowCol.java - To change the input String to rows and columns accordingly on the board, Converts between board notation and array coordinates.
--Board.java - Represents the 8x8 board and piece placement.
--Chess.java - Entry point (main method)
-
+- `Color.java` – Enum class to represent the black and white player colors.
+- `Pieces.java` – Abstract base class for all chess pieces.
+- `King.java` – Subclass of `Pieces.java`, handles king-specific movement.
+- `Queen.java` – Subclass of `Pieces.java`, handles queen-specific movement.
+- `Bishop.java` – Subclass of `Pieces.java`, handles bishop-specific movement.
+- `Rook.java` – Subclass of `Pieces.java`, handles rook-specific movement.
+- `Knight.java` – Subclass of `Pieces.java`, handles knight-specific movement.
+- `Pawn.java` – Subclass of `Pieces.java`, handles pawn-specific movement.
+- `Player.java` – Represents a player and their color.
+- `Cell.java` – Represents a square on the board.
+- `ChangeRowCol.java` – Converts user input like `e2` to array indices.
+- `Board.java` – Represents the 8x8 board and manages piece placement.
+- `ChessGame.java` – Game loop, move coordination, input handling.
+- `Chess.java` – Main class, starts the program.
 **Design Principles Used**
 
 -Inheritance: Pieces base class with polymorphic isValidMove() implemented by each piece.
